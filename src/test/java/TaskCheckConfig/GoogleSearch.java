@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 
 public class GoogleSearch {
     public static void main(String[] args) {
@@ -13,7 +11,7 @@ public class GoogleSearch {
 //        System.setProperty("webdriver.chrome.driver",
 //                "src/main/resources/drivers/chromedriver"); // Chrome - ustawienie property systemowego - obecnie nie trzeba tego ustawiać
 
-        WebDriver driver = new SafariDriver(); // tworzymy obiek drivera - wybieramy przglądarkę z którą chcemy pracować
+        WebDriver driver = new ChromeDriver(); // tworzymy obiek drivera - wybieramy przglądarkę z którą chcemy pracować
         driver.manage().window().maximize(); // maksymalizacja okna przeglądarki
         driver.get("http://www.google.com"); // wpisujemy adres do przeglądarki
         WebElement acceptCookiesButton = driver.findElement(By.id("L2AGLb")); // wyszukanie elementu "Zaakceptuj wszystko" na stronie"
